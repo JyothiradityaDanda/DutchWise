@@ -1,3 +1,5 @@
-apps/
+server/
 packages/
 docker-compose.yml
+*.md
+!README.md

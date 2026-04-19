@@ -13,15 +13,15 @@ node_modules/
 /out/
 /build/
 /dist/
-apps/api/dist/
+server/dist/
 
 # environment & secrets — NEVER commit these
 .env
 .env.*
 !.env.example
-apps/api/.env
-apps/api/.env.*
-!apps/api/.env.example
+server/.env
+server/.env.*
+!server/.env.example
 
 # OS
 .DS_Store
@@ -55,7 +55,7 @@ yarn-error.log*
 next-env.d.ts
 
 # prisma
-apps/api/prisma/migrations/dev/
+server/prisma/migrations/dev/
 
 # docker
 docker-compose.override.yml
