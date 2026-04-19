@@ -10,7 +10,7 @@ const sizeMap = {
 } as const;
 
 interface AvatarProps {
-  src?: string;
+  src?: string | null;
   name: string;
   size?: keyof typeof sizeMap;
   className?: string;
