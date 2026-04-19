@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { GlassCard, Button, Input, Avatar } from '@/components/ui';
@@ -9,6 +9,14 @@ import { apiGetGroups, apiGetGroup, apiCreateExpense } from '@/lib/api';
 import { validateSplit, EXPENSE_CATEGORIES, type SplitType } from '@/lib/constants';
 
 export default function NewExpensePage() {
+  return (
+    <Suspense fallback={<div className="max-w-xl mx-auto px-4 py-16 text-center" style={{ color: 'var(--text-muted)' }}>Loading…</div>}>
+      <NewExpenseForm />
+    </Suspense>
+  );
+}
+
+function NewExpenseForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const preGroupId = searchParams.get('groupId');
