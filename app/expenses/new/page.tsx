@@ -6,9 +6,7 @@ import { motion } from 'framer-motion';
 import { GlassCard, Button, Input, Avatar } from '@/components/ui';
 import { useAppStore } from '@/stores/useAppStore';
 import { apiGetGroups, apiGetGroup, apiCreateExpense } from '@/lib/api';
-import { validateSplit } from '@dutchwise/shared';
-import { EXPENSE_CATEGORIES } from '@dutchwise/shared';
-import type { SplitType } from '@dutchwise/shared';
+import { validateSplit, EXPENSE_CATEGORIES, type SplitType } from '@/lib/constants';
 
 export default function NewExpensePage() {
   const router = useRouter();
