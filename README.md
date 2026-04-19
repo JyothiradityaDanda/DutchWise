@@ -1,2 +1,2 @@
 # DutchWise
-It is a Dutch Wise not Split. 
+Lets go Dutch and not Split our friendship. 
