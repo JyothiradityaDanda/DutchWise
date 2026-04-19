@@ -11,8 +11,9 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "declaration": true,
+    "baseUrl": ".",
     "paths": {
-      "@dutchwise/shared": ["../../packages/shared/src"]
+      "@dutchwise/shared": ["../../packages/shared/src", "../../packages/shared/src/index"]
     }
   },
   "include": ["src/**/*"],
